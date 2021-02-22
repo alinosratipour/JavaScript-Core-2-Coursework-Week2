@@ -23,7 +23,4 @@ let people = [
   { name: "Boris", job: "Prime Minister" },
 ];
 
-
-
-
 listOfNames(people);
