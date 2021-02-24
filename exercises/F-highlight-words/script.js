@@ -1,5 +1,47 @@
 function highlightWords(paragraph, colours) {
-  // Write your code here...
+ 
+  // created our elements
+  let content = document.querySelector("#content");
+  let select = document.createElement("select");
+  let p = document.createElement("p");
+  
+  // append child elements to parents
+  content.appendChild(select);
+  content.appendChild(p);
+
+  // loop in our array of color and show them in menu
+  colours.forEach(color => {
+    let menuItem = document.createElement("option");
+    menuItem.innerHTML = color;
+    select.appendChild(menuItem);
+  });
+
+
+   // convert our paragraph into array then we can iterate over it.
+  let splitWord = paragraph.split(" ");
+
+   // loop in our array 
+  splitWord.forEach( word => {
+    let span = document.createElement("span");
+    span.innerText = word + " ";
+    p.appendChild(span);
+
+ // this function shows which word was clicked then show the related color
+   function getWord(){
+     if (select.value == "none") {
+        this.style.backgroundColor = "transparent";
+      } else {
+        this.style.backgroundColor = select.value;
+      }
+   }
+
+   // add our click event which calls our function
+   span.addEventListener("click" , getWord);
+  });
+
+
+
+
 }
 
 const paragraph =
