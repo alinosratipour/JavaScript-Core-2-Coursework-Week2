@@ -74,7 +74,7 @@ function checkValid(event) {
      const describe = document.getElementsByTagName("textarea")[0];
  
   
- let validemail = email.value.includes("@");
+ let validEmail = email.value.includes("@");
   
 if(email.value== "" ){
 email.style.background ="red";
@@ -97,7 +97,7 @@ if(userName.value.length < 5){
     return false;
 }
 
-if (!validemail) {
+if (!validEmail) {
     alert("Please enter correct email ID")
     return false;
     }
