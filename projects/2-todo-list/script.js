@@ -9,6 +9,10 @@ let todos = [
 
 
 function populateTodoList(todos){
+
+
+
+
     // Write your code here... and remember to reset the input field to be blank after creating a todo!
     let li = document.createElement("li");
     let list = document.getElementById("todo-list");
@@ -25,13 +29,16 @@ function populateTodoList(todos){
      li.className= "list-group-item d-flex justify-content-between align-items-center";
      
      li.appendChild(span);
-    p.innerText =input.value
+  p.innerText =input.value
     li.appendChild(p);
     span.appendChild(iconTrash);
     span.appendChild(check);
     todos.push( { task: input.value, completed: false });
     list.appendChild(li);
     console.log(todos)
+
+
+
 
 function removeElement() {
    const e = document.querySelector("li:last-child");
@@ -60,9 +67,18 @@ check.addEventListener("click", finishedToDo);
 function addNewTodo(event) {
   // The code below prevents the page from refreshing when we click the 'Add Todo' button.
   event.preventDefault();
-  
-    populateTodoList(todos);
-  
+    
+      let input = document.querySelector("#todoInput");
+
+if(input.value== ""){
+  alert("please write somthing");
+  return false;
+}else{
+populateTodoList(todos);  
+}
+
+    return true;
+ input.value ="";
   
   // The code below prevents the page from refreshing when we click the 'Add Todo' button.
 
