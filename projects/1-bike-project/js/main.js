@@ -34,12 +34,10 @@ let btnVolunteer = document.querySelector(".buttons").getElementsByTagName("a")[
 btnVolunteer.style.background ="#31b0d5";
 btnVolunteer.style.color ="#ffffff";
 
-
-
 }
 
 function changeGreen(){
- 
+
  //change jumbotron color
 let jum = document.querySelector(".jumbotron");
 jum.style.background ="#87ca8a";
@@ -57,7 +55,6 @@ btnVolunteer.style.color ="#ffffff";
 blueBtn.addEventListener("click" ,changeBlue);
 orangeBtn.addEventListener("click", changeOrange);
 greenBtn.addEventListener("click", changeGreen);
-
 
 
 //******************* Part Two **************************//
