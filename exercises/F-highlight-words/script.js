@@ -4,7 +4,7 @@ function highlightWords(paragraph, colours) {
   let content = document.querySelector("#content");
   let select = document.createElement("select");
   let p = document.createElement("p");
-  
+
   // append child elements to parents
   content.appendChild(select);
   content.appendChild(p);
