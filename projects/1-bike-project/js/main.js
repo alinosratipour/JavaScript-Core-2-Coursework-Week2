@@ -4,8 +4,7 @@ let orangeBtn = document.querySelector("#orangeBtn");
 let greenBtn = document.querySelector("#greenBtn");
 
 function changeBlue(){
- document.body.style.background= "blue";
-
+ 
  //change jumbotron color
 let jum = document.querySelector(".jumbotron");
 jum.style.background ="#588fbd";
@@ -21,8 +20,7 @@ btnVolunteer.style.color ="#ffffff";
 }
 
 function changeOrange(){
- document.body.style.background= "orange";
-
+ 
  //change jumbotron color
 let jum = document.querySelector(".jumbotron");
 jum.style.background ="#f0ad4e";
@@ -41,8 +39,7 @@ btnVolunteer.style.color ="#ffffff";
 }
 
 function changeGreen(){
- document.body.style.background= "green";
-
+ 
  //change jumbotron color
 let jum = document.querySelector(".jumbotron");
 jum.style.background ="#87ca8a";
@@ -66,48 +63,46 @@ greenBtn.addEventListener("click", changeGreen);
 //******************* Part Two **************************//
 
 const sub = document.getElementsByTagName("button")[4];
-function checkValid(event) {
-     event.preventDefault();
- 
-     const email = document.getElementsByTagName("input")[0] ;
-     const userName = document.getElementsByTagName("input")[1];
-     const describe = document.getElementsByTagName("textarea")[0];
- 
-  
- let validEmail = email.value.includes("@");
-  
-if(email.value== "" ){
-email.style.background ="red";
-return false;
-}
+    function checkValid(event) {
+        event.preventDefault();
     
-
-if(userName.value== ""){
-userName.style.background ="red";
-return false;  
-}
-
-if(describe.value== ""){
-describe.style.background ="red";
-return false;  
-}
-
-if(userName.value.length < 5){
-    alert("user name must be at least 5 character long");
-    return false;
-}
-
-if (!validEmail) {
-    alert("Please enter correct email ID")
+        const email = document.getElementsByTagName("input")[0] ;
+        const userName = document.getElementsByTagName("input")[1];
+        const describe = document.getElementsByTagName("textarea")[0];
+        let validEmail = email.value.includes("@");
+    
+    if(email.value== "" ){
+    email.style.background ="red";
     return false;
     }
+        
 
-    alert("thank you for filling out the form");
-    email.value = "";
-    userName.value= "";
-    describe.value="";
-    userName.style.background ="none";
-    email.style.background ="none";
-    describe.style.background= "none";
-}
+    if(userName.value== ""){
+    userName.style.background ="red";
+    return false;  
+    }
+
+    if(describe.value== ""){
+    describe.style.background ="red";
+    return false;  
+    }
+
+    if(userName.value.length < 5){
+        alert("user name must be at least 5 character long");
+        return false;
+    }
+
+    if (!validEmail) {
+        alert("Please enter correct email ID")
+        return false;
+        }
+
+        alert("thank you for filling out the form");
+        email.value = "";
+        userName.value= "";
+        describe.value="";
+        userName.style.background ="none";
+        email.style.background ="none";
+        describe.style.background= "none";
+    }
    sub.addEventListener("click", checkValid);
