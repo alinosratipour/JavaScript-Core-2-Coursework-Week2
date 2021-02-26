@@ -13,22 +13,22 @@ function populateTodoList(todos){
     let li = document.createElement("li");
     let list = document.getElementById("todo-list");
     let input = document.querySelector("#todoInput");
-
+  let span = document.createElement("span");
     let iconTrash = document.createElement("i");
     let check = document.createElement("i");
     let p = document.createElement("p");
     iconTrash.className = "fa fa-trash";
     check.className =     "fa fa-check";
-   
+   span.className ="badge bg-primary rounded-pill";
 
      li.style.listStyle = "none";
      li.className= "list-group-item d-flex justify-content-between align-items-center";
      
-
+     li.appendChild(span);
     p.innerText =input.value
     li.appendChild(p);
-    li.appendChild(iconTrash);
-    li.appendChild(check);
+    span.appendChild(iconTrash);
+    span.appendChild(check);
     todos.push( { task: input.value, completed: false });
     list.appendChild(li);
     console.log(todos)
