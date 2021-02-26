@@ -8,6 +8,7 @@ let todos = [
 
 function populateTodoList(todos){
 
+
   // Write your code here... and remember to reset the input field to be blank after creating a todo!
   let li = document.createElement("li");
   let list = document.getElementById("todo-list");
@@ -21,13 +22,14 @@ function populateTodoList(todos){
   span.className ="badge bg-primary rounded-pill";
 
   li.style.listStyle = "none";
-  li.className= "list-group-item d-flex justify-content-between align-items-center";
+  li.className= "list-group-item d-flex justify-content-between align-items-center  ";
 
   li.appendChild(span);
-  p.innerText =input.value
+ 
   li.appendChild(p);
   span.appendChild(iconTrash);
   span.appendChild(check);
+   p.innerText =input.value
   todos.push( { task: input.value, completed: false });
   list.appendChild(li);
   console.log(todos)
