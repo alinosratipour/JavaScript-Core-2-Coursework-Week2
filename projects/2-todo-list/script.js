@@ -62,23 +62,13 @@ btn.addEventListener("click", deleteAllCompletedTodos);
 function deleteAllCompletedTodos() {
 
  const listItems = document.querySelectorAll("li");
-  const todoText = document.querySelectorAll("p"); 
 
-
- for(i of listItems){
-
-       for(todo of todoText){
-          if(i.style.textDecoration === "line-through" ){
-          i.remove();
-            
-          }
-      }
-
+ for(i of listItems){ 
+    if(i.style.textDecoration === "line-through" ){
+    i.remove();       
+    }
  }
      
-
-      
-
 
   }
   
